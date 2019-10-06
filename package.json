@@ -1,0 +1,11 @@
+{
+  "name": "web-scraping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ayogatot <azerino25@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^1.20.0"
+  }
+}
