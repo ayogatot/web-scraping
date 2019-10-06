@@ -15,6 +15,13 @@ const getScreenshot = async websiteName => {
   await browser.close();
 };
 
-getScreenshot("https://komiku.co/");
+app.get("/scraping", (req, res) => {
+  const webName = req.query.web;
+  getScreenshot(webName).then(() => {
+    res.status(200).json({
+      message: "Screenshot has been saved"
+    });
+  });
+});
 
 app.listen(PORT, () => console.log(`Server running at ${PORT}`));
